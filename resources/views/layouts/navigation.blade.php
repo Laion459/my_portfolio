@@ -12,10 +12,27 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                    <x-nav-link :href="route('welcome')" :active="request()->routeIs('welcome')">
+                        {{ __('WELCOME') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
+                        {{ __('ABOUT') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('projects')" :active="request()->routeIs('projects')">
+                        {{ __('PROJECTS') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('blog')" :active="request()->routeIs('blog')">
+                        {{ __('BLOG') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('curriculum')" :active="request()->routeIs('curriculum')">
+                        {{ __('CURRICULUM') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('news')" :active="request()->routeIs('news')">
+                        {{ __('NEWS') }}
+                    </x-nav-link>
+
                 </div>
+
             </div>
 
             <!-- Settings Dropdown -->
@@ -42,8 +59,7 @@
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
-                            <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
+                            <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
@@ -51,6 +67,12 @@
                     </x-slot>
                 </x-dropdown>
             </div>
+
+            <button id="theme-toggle" class="text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="grey" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                </button>
 
             <!-- Hamburger -->
             <div class="-me-2 flex items-center sm:hidden">
@@ -88,13 +110,18 @@
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
 
-                    <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
+                    <x-responsive-nav-link :href="route('logout')" onclick="event.preventDefault();
                                         this.closest('form').submit();">
                         {{ __('Log Out') }}
                     </x-responsive-nav-link>
                 </form>
             </div>
         </div>
+
     </div>
+    <button id="back-to-top-btn" class="hidden fixed bottom-8 right-8 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full shadow-lg focus:outline-none focus:shadow-outline transform transition duration-300 ease-in-out">
+        ▲ Topo
+    </button>
+
+    <script src="scripts/scripts.js"></script>
 </nav>

@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+.theme-light {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+}
+
+.theme-dark {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* Aplicar cores aos cards de notícias */
+.news-card {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Aplicar cores ao header */
+header {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
