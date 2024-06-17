@@ -1,0 +1,6 @@
+.news-card img {
+    width: 450px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15%;
+  }

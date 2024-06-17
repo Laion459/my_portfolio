@@ -1,0 +1,28 @@
+#back-to-top-btn {
+    transition: opacity 0.3s, transform 0.3s;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 99;
+    border-radius: 50%;
+}
+
+#back-to-top-btn.hidden {
+    display: none;
+}
+
+#back-to-top-btn.opacity-0 {
+    opacity: 0;
+}
+
+#back-to-top-btn.opacity-100 {
+    opacity: 1;
+}
+
+#back-to-top-btn.-translate-y-8 {
+    transform: translateY(2rem);
+}
+
+#back-to-top-btn.translate-y-0 {
+    transform: translateY(0);
+}
